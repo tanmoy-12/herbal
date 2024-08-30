@@ -232,6 +232,12 @@ html {
     height: 100%;
     object-fit: cover;
 }
+.benefits{
+    width: 100%;
+}
+.benefits img{
+    margin: 20px auto;
+}
 .footer{
     /* background-color: #0e0d0d4f; */
     padding: 100px 0 30px;
