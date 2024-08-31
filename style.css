@@ -98,6 +98,34 @@ html {
     font-weight: 500;
     font-size: 26px;
 }
+.nav-elements{
+    padding: 16px;
+    background-color: #dddddd;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.search{
+    display: flex;
+    margin: 10px auto;
+}
+.search input{
+    border: none;
+    padding: 12px;
+    outline: none;
+    width: 700px;
+    font-size: larger;
+    font-weight: 500;
+    border-radius: 6px 0 0 6px;
+}
+.search button{
+    border: none;
+    font-size: larger;
+    padding: 0 12px;
+}
+#searchbtn{
+    border-radius: 0 6px 6px 0;
+}
 .line {
     content: '';
     width: 200px;
