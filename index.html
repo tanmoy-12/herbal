@@ -52,23 +52,50 @@
       <div class="header">
         <div class="navbar">
           <div class="logo">
-            <a href="index.html"><img src="logo.png" width="200px" /></a>
+            <a href="index.html"><img src="logo.png" width="120px" /></a>
           </div>
-          <a>ABOUT US</a>
+          <!-- <a>ABOUT US</a>
           <a href="#" class="nav-link" data-target="wrapper2">OUR SERVICES</a>
           <a href="#" class="nav-link" data-target="footer">CONTACT US</a>
-          <a href="#" class="nav-link" data-target="wrapper4">LOCATION</a>
+          <a href="#" class="nav-link" data-target="wrapper4">LOCATION</a> -->
+          <div class="search">
+            <input placeholder="Search by plant or medicine name..." />
+            <button id="imagesearchbyn">
+              <i class="fa-solid fa-image"></i>
+            </button>
+            <button id="searchbtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
           <button class="b1">
             Login&nbsp;<i class="fa-solid fa-share-from-square"></i>
           </button>
         </div>
-        <div class="nav-elements">
-          <div class="search">
-            <input placeholder="Search by plant or medicine name...">
-            <button id="imagesearchbyn"><i class="fa-solid fa-image"></i></button>
-            <button id="searchbtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+        <button class="chatbot-button" id="chatbot-button">
+          <i class="fa-solid fa-headset"></i>
+        </button>
+        <!-- Chatbot Window -->
+        <div class="chatbot-window" id="chatbot-window">
+          <div class="chatbot-header">
+            Herbal Chatbot&nbsp;<i class="fa-solid fa-leaf"></i>
+          </div>
+          <div class="chatbot-messages" id="chatbot-messages"></div>
+          <div class="chatbot-input">
+            <input
+              type="text"
+              id="user-input"
+              placeholder="Ask your query here..."
+            />
+            <div class="chatsubmit">
+              <button id="send-button">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              <div class="loader" id="loader" style="display: none"></div>
+            </div>
           </div>
         </div>
+        <!--Chatbot End-->
       </div>
       <div class="c1">
         <div class="c1left">
@@ -94,161 +121,196 @@
       </div>
       <div class="supports">
         <div class="support">
-            <div class="supportIcon">
-                <i class="fa-solid fa-headset"></i>
-            </div>
-            <div class="supportText">
-                <p>24/7 Support</p>
-                <span>24/7 Technical Support</span>
-            </div>
+          <div class="supportIcon">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div class="supportText">
+            <p>24/7 Support</p>
+            <span>24/7 Technical Support</span>
+          </div>
         </div>
         <div class="support">
-            <div class="supportIcon">
-                <i class="fa-solid fa-wallet"></i>
-            </div>
-            <div class="supportText">
-                <p>Better Information</p>
-                <span>Integrated Audio and Video Content</span>
-            </div>
+          <div class="supportIcon">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+          <div class="supportText">
+            <p>Better Information</p>
+            <span>Integrated Audio and Video Content</span>
+          </div>
         </div>
         <div class="support">
-            <div class="supportIcon">
-                <i class="fa-solid fa-layer-group"></i>
-            </div>
-            <div class="supportText">
-                <p>Interactive Models</p>
-                <span>Interactive 3D Plant Models</span>
-            </div>
+          <div class="supportIcon">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div class="supportText">
+            <p>Interactive Models</p>
+            <span>Interactive 3D Plant Models</span>
+          </div>
         </div>
       </div>
       <div class="selection-options">
         <div class="o">
           <label for="medicinal-uses">Select by Medicinal Uses:</label>
           <select id="medicinal-uses">
-              <option value="">--Select an Option--</option>
-              <option value="anti-inflammatory">Anti-inflammatory</option>
-              <option value="antioxidant">Antioxidant</option>
-              <option value="digestive">Digestive</option>
-              <option value="immune-support">Immune Support</option>
-              <!-- Add more options as needed -->
+            <option value="">--Select an Option--</option>
+            <option value="anti-inflammatory">Anti-inflammatory</option>
+            <option value="antioxidant">Antioxidant</option>
+            <option value="digestive">Digestive</option>
+            <option value="immune-support">Immune Support</option>
+            <!-- Add more options as needed -->
           </select>
         </div>
-    
+
         <div class="o">
           <label for="region">Select by Region:</label>
           <select id="region">
-              <option value="">--Select an Option--</option>
-              <option value="north-america">North America</option>
-              <option value="south-america">South America</option>
-              <option value="asia">Asia</option>
-              <option value="europe">Europe</option>
-              <!-- Add more options as needed -->
+            <option value="">--Select an Option--</option>
+            <option value="north-america">North America</option>
+            <option value="south-america">South America</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <!-- Add more options as needed -->
           </select>
         </div>
-    
+
         <div class="o">
           <label for="type">Select by Type:</label>
           <select id="type">
-              <option value="">--Select an Option--</option>
-              <option value="herb">Herb</option>
-              <option value="shrub">Shrub</option>
-              <option value="tree">Tree</option>
-              <option value="vine">Vine</option>
-              <!-- Add more options as needed -->
+            <option value="">--Select an Option--</option>
+            <option value="herb">Herb</option>
+            <option value="shrub">Shrub</option>
+            <option value="tree">Tree</option>
+            <option value="vine">Vine</option>
+            <!-- Add more options as needed -->
           </select>
         </div>
-    </div>
+      </div>
       <div class="slider">
-        <h3 style="text-align: center;margin: 16px;font-weight: 600;">Some Commonly Used Medicinal Plants</h3>
+        <h3 style="text-align: center; margin: 16px; font-weight: 600">
+          Some Commonly Used Medicinal Plants
+        </h3>
         <div class="items">
-            <!-- Item 1: Basil -->
-            <div class="item">
-                <div class="item-image">
-                    <img src="basil.png" alt="Basil" />
-                </div>
-                <div class="item-name">Basil</div>
-                <div class="item-botanical-name">Ocimum basilicum</div>
+          <!-- Item 1: Basil -->
+          <div class="item">
+            <div class="item-image">
+              <img src="basil.png" alt="Basil" />
             </div>
-    
-            <!-- Item 2: Chamomile -->
-            <div class="item">
-                <div class="item-image">
-                    <img src="Chamomile.png" alt="Chamomile" />
-                </div>
-                <div class="item-name">Chamomile</div>
-                <div class="item-botanical-name">Matricaria chamomilla</div>
+            <div class="item-name">Basil</div>
+            <div class="item-botanical-name">Ocimum basilicum</div>
+          </div>
+
+          <!-- Item 2: Chamomile -->
+          <div class="item">
+            <div class="item-image">
+              <img src="Chamomile.png" alt="Chamomile" />
             </div>
-    
-            <!-- Item 3: Echinacea -->
-            <div class="item">
-                <div class="item-image">
-                    <img src="Echinacea.png" alt="Echinacea" />
-                </div>
-                <div class="item-name">Echinacea</div>
-                <div class="item-botanical-name">Echinacea purpurea</div>
+            <div class="item-name">Chamomile</div>
+            <div class="item-botanical-name">Matricaria chamomilla</div>
+          </div>
+
+          <!-- Item 3: Echinacea -->
+          <div class="item">
+            <div class="item-image">
+              <img src="Echinacea.png" alt="Echinacea" />
             </div>
-    
-            <!-- Item 4: Ginger -->
-            <a href="item.html">
-              <div class="item">
-                <div class="item-image">
-                    <img src="ginger.png" alt="Ginger" />
-                </div>
-                <div class="item-name">Ginger</div>
-                <div class="item-botanical-name">Zingiber officinale</div>
+            <div class="item-name">Echinacea</div>
+            <div class="item-botanical-name">Echinacea purpurea</div>
+          </div>
+
+          <!-- Item 4: Ginger -->
+          <a href="item.html">
+            <div class="item">
+              <div class="item-image">
+                <img src="ginger.png" alt="Ginger" />
               </div>
-            </a>
-    
-            <!-- Item 5: Lavender -->
-            <div class="item">
-                <div class="item-image">
-                    <img src="Lavender.png" alt="Lavender" />
-                </div>
-                <div class="item-name">Lavender</div>
-                <div class="item-botanical-name">Lavandula angustifolia</div>
+              <div class="item-name">Ginger</div>
+              <div class="item-botanical-name">Zingiber officinale</div>
             </div>
+          </a>
+
+          <!-- Item 5: Lavender -->
+          <div class="item">
+            <div class="item-image">
+              <img src="Lavender.png" alt="Lavender" />
+            </div>
+            <div class="item-name">Lavender</div>
+            <div class="item-botanical-name">Lavandula angustifolia</div>
+          </div>
         </div>
-    </div>
-    <div class="benefits">
-      <img src="OIP.jpg" alt="">
-    </div>
+      </div>
+      <!-- <div class="benefits">
+        <img src="OIP.jpg" alt="" />
+      </div> -->
       <div class="footer" id="footer">
         <div class="frow">
-            <div class="fcolumn">
-                <div class="logo">
-                    <h2>Department Of Ayush</h2>
-                </div>
-                <p> Explore the world of medicinal plants and traditional healing techniques, empowering your wellness journey with ancient knowledge.</p>
+          <div class="fcolumn">
+            <div class="logo">
+              <h2>Department Of Ayush</h2>
             </div>
-            <div class="fcolumn">
-                <h3>Address<div class="underline"><span></span></div></h3>
-                <p>Ministry of Ayush, Ayush Bhawan,</p>
-                <p> B Block, GPO Complex,</p>
-                <p>INA, New Delhi - 110023</p>
-                <p class="email-id"><i class="fa-regular fa-envelope"></i>&nbsp;support_ayush@gov.in</p>
-            </div>
-            <div class="fcolumn">
-                <h3>Quick Links <div class="underline"><span></span></div>
-                </h3>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About US</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Services</a></li>
-                </ul>
-            </div>
-            <div class="fcolumn">
-                <h3>Contact Us <div class="underline"><span></span></div>
-                </h3>
-                <p>+91-9331863389</p>
-                <p>+91-9230558682</p>
-            </div>
+            <p>
+              Explore the world of medicinal plants and traditional healing
+              techniques, empowering your wellness journey with ancient
+              knowledge.
+            </p>
+          </div>
+          <div class="fcolumn">
+            <h3>
+              Address
+              <div class="underline"><span></span></div>
+            </h3>
+            <p>Ministry of Ayush, Ayush Bhawan,</p>
+            <p>B Block, GPO Complex,</p>
+            <p>INA, New Delhi - 110023</p>
+            <p class="email-id">
+              <i class="fa-regular fa-envelope"></i>&nbsp;support_ayush@gov.in
+            </p>
+          </div>
+          <div class="fcolumn">
+            <h3>
+              Quick Links
+              <div class="underline"><span></span></div>
+            </h3>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">About US</a></li>
+              <li><a href="">Contact Us</a></li>
+              <li><a href="">Services</a></li>
+            </ul>
+          </div>
+          <div class="fcolumn">
+            <h3>
+              Contact Us
+              <div class="underline"><span></span></div>
+            </h3>
+            <p>+91-9331863389</p>
+            <p>+91-9230558682</p>
+          </div>
         </div>
-        <hr>
-        <p class="copyright">All Rights Reserved &nbsp;<i class="fa-regular fa-copyright"></i>&nbsp;
-            2024</p>
+        <hr />
+        <p class="copyright">
+          All Rights Reserved &nbsp;<i class="fa-regular fa-copyright"></i
+          >&nbsp; 2024
+        </p>
+      </div>
     </div>
-    </div>
+    <script>
+      // Function to toggle the dropdown menu visibility
+      function toggleDropdown(id) {
+        var dropdown = document.getElementById("mobile-dropdown-" + id);
+        dropdown.style.display =
+          dropdown.style.display === "block" ? "none" : "block";
+      }
+
+      // Function to toggle the visibility of sub-dropdowns
+      function toggleSubDropdown(parentId) {
+        var subDropdown = document.querySelector(
+          "#" + parentId + " .sub-dropdowns"
+        );
+        subDropdown.style.display =
+          subDropdown.style.display === "block" ? "none" : "block";
+      }
+    </script>
+    <script src="chatbot.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
