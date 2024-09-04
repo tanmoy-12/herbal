@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 const port = 3000;
 
-const apiKey = 'AIzaSyDUOnrVf3HXEiAC-w0Dg_vxS4jgscpqYG0';
+const apiKey = process.env.API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
 const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
