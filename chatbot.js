@@ -70,7 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
         text = text.replace(/[#]/g, '');
 
         // Replace **text** with <b>text</b> and insert a line break after the bold text
-        text = text.replace(/\*\*(.*?)\*\*/g, '<br><b>$1</b><br>');
+        text = text.replace(/\*\*(.*?)\*\*/g, '<br><b>$1</b>');
+        text = text.replace(/[*]/g, '');
 
         return text;
     }
