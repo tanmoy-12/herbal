@@ -111,6 +111,12 @@ html {
     justify-content: center;
 }
 .search{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.searchbar{
+    position: relative;
     display: flex;
     margin: 10px;
     height: 40px;
@@ -145,6 +151,38 @@ html {
     padding-left: 10px;
     transform: skew(20deg);
 }
+.search-results {
+    position: absolute;
+    background-color: rgb(231, 250, 233);
+    border: none;
+    border-radius: 6px;
+    width: 690px;
+    top: 57px;
+    z-index: 30;
+    left: 10px;
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 8px 10px;
+    font-weight: 500;
+    font-size: larger;
+  }
+  
+  .search-result-item {
+    cursor: pointer;
+    margin-top: 12px;
+    color: #003c05;
+  }
+  
+  .search-result-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .not-found {
+    color: red;
+  }
+  
 /*---------------Navigation Menu with hooverable COntent-----------------*/
 .navigation{
     background-color: #d5d6d2;

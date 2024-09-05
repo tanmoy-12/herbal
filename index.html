@@ -59,14 +59,17 @@
           <a href="#" class="nav-link" data-target="footer">CONTACT US</a>
           <a href="#" class="nav-link" data-target="wrapper4">LOCATION</a> -->
           <div class="search">
-            <input placeholder="Search by plant or medicine name..." />
-            <button id="imagesearchbyn">
-              <i class="fa-solid fa-image"></i>
-            </button>
-            <button id="searchbtn">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </div>
+            <div class="searchbar">
+              <input id="search-input" placeholder="Search by plant or medicine name..." />
+              <button id="imagesearchbyn">
+                <i class="fa-solid fa-image"></i>
+              </button>
+              <button id="searchbtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+            <div id="search-results" class="search-results"></div>
+          </div>          
           <a href="cart.html"><button id="bookmark"><i class="fa-solid fa-cart-shopping"></i></button></a>
           <button class="b1">
             Login&nbsp;<i class="fa-solid fa-share-from-square"></i>
@@ -219,7 +222,7 @@
           </div>
 
           <!-- Item 4: Ginger -->
-          <a href="item.html">
+          <a href="ginger.html">
             <div class="item">
               <div class="item-image">
                 <img src="ginger.png" alt="Ginger" />

@@ -98,14 +98,17 @@
             <a href="index.html"><img src="logo.png" width="120px" /></a>
           </div>
           <div class="search">
-            <input placeholder="Search by plant or medicine name..." />
-            <button id="imagesearchbyn">
-              <i class="fa-solid fa-image"></i>
-            </button>
-            <button id="searchbtn">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </div>
+            <div class="searchbar">
+              <input id="search-input" placeholder="Search by plant or medicine name..." />
+              <button id="imagesearchbyn">
+                <i class="fa-solid fa-image"></i>
+              </button>
+              <button id="searchbtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+            <div id="search-results" class="search-results"></div>
+          </div>   
           <a href="cart.html"
             ><button id="bookmark">
               <i class="fa-solid fa-cart-shopping"></i></button
@@ -142,6 +145,7 @@
       </div>
       <div id="bookmarks-container"></div>
     </div>
+    <script src="script.js"></script>
     <script src="chatbot.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
