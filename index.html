@@ -48,16 +48,67 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Popup Modal -->
+<div id="popupModal" class="popup-modal">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h2>Virtual Herbal Garden: Problem vs Solution</h2>
+    <p><strong>Problem Statement:</strong> Create a Virtual Herbal Garden that provides an interactive, educational, and immersive experience to users, showcasing the diverse range of medicinal plants used in AYUSH.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>What was asked</th>
+          <th>What we have done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Interactive 3D Models</td>
+          <td>Implemented realistic 3D models of medicinal plants with zoom and rotation features</td>
+        </tr>
+        <tr>
+          <td>Detailed Information</td>
+          <td>Comprehensive details about each plant, including medicinal uses, botanical name, habitat, and cultivation methods</td>
+        </tr>
+        <tr>
+          <td>Multimedia Integration</td>
+          <td>High-quality images, videos, and audio files to enhance the learning experience</td>
+        </tr>
+        <tr>
+          <td>Search and Filter Options</td>
+          <td>Advanced search and filter options based on various criteria like medicinal uses, region, type, taste, qualities, and plant parts used</td>
+        </tr>
+        <tr>
+          <td>Virtual Tours</td>
+          <td>Guided virtual tours of plants based on specific themes like digestive health, immunity, and skin care</td>
+        </tr>
+        <tr>
+          <td>User Interaction</td>
+          <td>Bookmarking, note-taking, sharing, PDF downloads, and audio descriptions for plants</td>
+        </tr>
+        <tr>
+          <td>Image-based Searching</td>
+          <td>Implemented an AI-based image searching system for plant identification</td>
+        </tr>
+        <tr>
+          <td>24/7 Chatbot</td>
+          <td>Integrated a chatbot to answer user questions related to medicinal plants</td>
+        </tr>
+        <tr>
+          <td>Optional Features</td>
+          <td>Added ability to download plant info in PDF format, take notes, and share plants on social media</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
     <div class="container">
       <div class="header">
         <div class="navbar">
           <div class="logo">
             <a href="index.html"><img src="logo.png" width="120px" /></a>
           </div>
-          <!-- <a>ABOUT US</a>
-          <a href="#" class="nav-link" data-target="wrapper2">OUR SERVICES</a>
-          <a href="#" class="nav-link" data-target="footer">CONTACT US</a>
-          <a href="#" class="nav-link" data-target="wrapper4">LOCATION</a> -->
           <div class="search">
             <div class="searchbar">
               <input id="search-input" placeholder="Search by plant or medicine name..." />
@@ -70,12 +121,18 @@
             </div>
             <div id="search-results" class="search-results"></div>
           </div>          
-          <a href="cart.html"><button id="bookmark"><i class="fa-solid fa-cart-shopping"></i></button></a>
+          <a href="cart.html"><button id="bookmark"><i class="fa-regular fa-bookmark"></i></button></a>
           <button class="b1">
             Login&nbsp;<i class="fa-solid fa-share-from-square"></i>
           </button>
         </div>
-
+        <div class="nav2">
+          <a href="ayurveda.html" class="nav-link">Ayurveda</a>
+          <a href="#" class="nav-link" data-target="wrapper2">Naturopathy</a>
+          <a href="#" class="nav-link" data-target="footer">Unani</a>
+          <a href="#" class="nav-link" data-target="wrapper4">Siddha</a>
+          <a href="#" class="nav-link" data-target="wrapper4">Homeopathy</a>
+        </div>
         <button class="chatbot-button" id="chatbot-button">
           <i class="fa-solid fa-headset"></i>
         </button>
@@ -245,9 +302,14 @@
       <!-- <div class="benefits">
         <img src="OIP.jpg" alt="" />
       </div> -->
-      <div class="about-us">
-        <h3><i class="fa-solid fa-circle-info"></i>&nbsp;About Us</h3>
-        <p>The Ministry of Ayush was formed on the 9th of November 2014 with a vision of reviving the profound knowledge of our ancient systems of medicine and ensuring the optimal development and propagation of the Ayush systems of healthcare. Earlier, the Department of Indian System of Medicine and Homoeopathy (ISM&H) formed in 1995, was responsible for the development of these systems. It was then renamed as the Department of Ayurveda, Yoga, and Naturopathy, Unani, Siddha and Homoeopathy (Ayush) in November 2003 with focused attention towards education and research in Ayurveda, Yoga and Naturopathy, Unani, Siddha, and Homoeopathy.</p>
+      <div class="about">
+        <div class="aboutImage">
+          <img src="https://th.bing.com/th/id/R.947405596706b221a11cae6b5bd96bd9?rik=yqRNLA9QGv94sA&riu=http%3a%2f%2fbrackenburyclinic.com%2fwp-content%2fuploads%2f2015%2f12%2fHerbal-Medicine.jpg&ehk=kRjXF%2fS8cp4MuxeiyDjZPqkxAp5g2Ur9SmXAQbnT%2fYs%3d&risl=&pid=ImgRaw&r=0">
+        </div>
+        <div class="about-us">
+          <h3><i class="fa-solid fa-circle-info"></i>&nbsp;About Us</h3>
+          <p>The Ministry of Ayush was formed on the 9th of November 2014 with a vision of reviving the profound knowledge of our ancient systems of medicine and ensuring the optimal development and propagation of the Ayush systems of healthcare. Earlier, the Department of Indian System of Medicine and Homoeopathy (ISM&H) formed in 1995, was responsible for the development of these systems. It was then renamed as the Department of Ayurveda, Yoga, and Naturopathy, Unani, Siddha and Homoeopathy (Ayush) in November 2003 with focused attention towards education and research in Ayurveda, Yoga and Naturopathy, Unani, Siddha, and Homoeopathy.</p>
+        </div>
       </div>
       <div class="overview">
         <p class="heading1">Ayush Overview</p>

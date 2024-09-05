@@ -38,6 +38,62 @@ html {
     height: 16px;
     width: 16px;
 }
+.popup-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .popup-content {
+    background-color: white;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 8px;
+    font-size: larger;
+    height: 400px;
+    overflow: scroll;
+    position: relative;
+  }
+  
+  .popup-content h2 {
+    text-align: center;
+  }
+  
+  .popup-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .popup-content table th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .popup-content table th {
+    background-color: #f2f2f2;
+  }
+  
+  .close-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    color: red;
+  }
 .container{
     /* background: linear-gradient(45deg, #c0c0c0, #9bbbff96, #b7b6f7b0); */
     background-color: #979797c5;
@@ -67,6 +123,17 @@ html {
 }
 .navbar a:hover{
     color: rgb(0, 104, 9);
+}
+.nav2{
+    display: flex;
+    background-color: #d1d1d1;
+    padding: 12px;
+    text-align: center;
+    justify-content: center;
+    font-size: larger;
+    font-weight: 600;
+    gap: 18px;
+    color: #003c05;
 }
 .b1{
     background-color: transparent;
@@ -662,14 +729,31 @@ a{
     font-size: medium;
     text-align: justify;
 }
+.about{
+    display: flex;
+    margin: 16px 8px;
+}
+.aboutImage{
+    width: 50%;
+    height: auto;
+}
+.aboutImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .about-us{
-    background-color: #fff;
+    background-color: #145a0c;
     background-image: url('https://th.bing.com/th/id/R.3e9007f3257b75a840f9422dfe66756d?rik=fTuzIXQ1fY1DTw&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2fgreen-transparent-background%2fgreen-transparent-background-20.png&ehk=NX3nhrMPanGnVCJOvx720C2Q9YrfB7BIXOuLyBfNMAY%3d&risl=&pid=ImgRaw&r=0');
     background-position: center;
     background-size: cover;
-    margin: 16px 8px;
     font-weight: 500;
     padding: 12px;
+    width: 50%;
+    height: auto;
+    color: #fff;
+    font-size: larger;
+    font-weight: 600;
 }
 .about-us h3{
     font-weight: 700;

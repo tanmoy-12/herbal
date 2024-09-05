@@ -86,3 +86,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
+
+  //Popup display
+  document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById("popupModal");
+    const closeBtn = document.querySelector(".close-btn");
+  
+    // Show modal on page load
+    modal.style.display = "block";
+  
+    // Close modal when 'x' is clicked
+    closeBtn.addEventListener("click", function() {
+      modal.style.display = "none";
+    });
+  
+    // Hide modal when clicking outside of the content
+    window.addEventListener("click", function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
