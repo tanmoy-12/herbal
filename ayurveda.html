@@ -47,7 +47,7 @@
       rel="stylesheet"
     />
     <title>Herbal Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <style>
     .container{
@@ -144,58 +144,66 @@
     }
   </style>
   <body>
-    <div class="container">
-      <div class="header">
-        <div class="navbar">
-          <div class="logo">
-            <a href="index.html"><img src="logo.png" width="120px" /></a>
-          </div>
-          <div class="search">
-            <div class="searchbar">
-              <input id="search-input" placeholder="Search by plant or medicine name..." />
-              <button id="imagesearchbyn">
-                <i class="fa-solid fa-image"></i>
-              </button>
-              <button id="searchbtn">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </div>
-            <div id="search-results" class="search-results"></div>
-          </div>   
-          <a href="cart.html"
-            ><button id="bookmark">
-              <i class="fa-solid fa-cart-shopping"></i></button
-          ></a>
-          <button class="b1">
-            Login&nbsp;<i class="fa-solid fa-share-from-square"></i>
-          </button>
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="logo/logo.png" width="120px" /></a>
         </div>
-
-        <button class="chatbot-button" id="chatbot-button">
-          <i class="fa-solid fa-headset"></i>
-        </button>
-        <!-- Chatbot Window -->
-        <div class="chatbot-window" id="chatbot-window">
-          <div class="chatbot-header">
-            Herbal Chatbot&nbsp;<i class="fa-solid fa-leaf"></i>
-          </div>
-          <div class="chatbot-messages" id="chatbot-messages"></div>
-          <div class="chatbot-input">
+        <div class="search">
+          <div class="searchbar">
             <input
-              type="text"
-              id="user-input"
-              placeholder="Ask your query here..."
+              id="search-input"
+              placeholder="Search by plant or medicine name..."
             />
-            <div class="chatsubmit">
-              <button id="send-button">
-                <i class="fa-solid fa-paper-plane"></i>
-              </button>
-              <div class="loader" id="loader" style="display: none"></div>
-            </div>
+            <button id="imagesearchbyn">
+              <i class="fa-solid fa-image"></i>
+            </button>
+            <button id="searchbtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+        <a href="cart.html"
+          ><button id="bookmark"><i class="fa-regular fa-bookmark"></i></button
+        ></a>
+        <button class="b1">
+          Login&nbsp;<i class="fa-solid fa-share-from-square"></i>
+        </button>
+      </div>
+      <div class="nav2">
+        <a href="ayurveda.html" class="nav-link">Ayurveda</a>
+        <a href="#" class="nav-link" data-target="wrapper2">Naturopathy</a>
+        <a href="#" class="nav-link" data-target="footer">Unani</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Siddha</a>
+        <a href="#" class="nav-link" data-target="wrapper4">Homeopathy</a>
+      </div>
+    </div>
+    <div class="container">
+      <button class="chatbot-button" id="chatbot-button">
+        <i class="fa-solid fa-headset"></i>
+      </button>
+      <!-- Chatbot Window -->
+      <div class="chatbot-window" id="chatbot-window">
+        <div class="chatbot-header">
+          Herbal Chatbot&nbsp;<i class="fa-solid fa-leaf"></i>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages"></div>
+        <div class="chatbot-input">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Ask your query here..."
+          />
+          <div class="chatsubmit">
+            <button id="send-button">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <div class="loader" id="loader" style="display: none"></div>
           </div>
         </div>
-        <!--Chatbot End-->
       </div>
+      <!--Chatbot End-->
       <div class="details">
         <div class="filter">
             <strong class="fh">Filter Plants by Ayurveda&nbsp;<i class="fa-solid fa-filter"></i></strong>
@@ -261,7 +269,7 @@
         <div id="bookmarks-container">
             <div class="citem">
                 <div class="citemImage">
-                    <img src="ashwagandha.jpeg">
+                    <img src="images/ashwagandha.jpeg">
                 </div>
                 <div class="citemDetails">
                     <h2>Ashwagandha (Withania somnifera)</h2>
@@ -274,7 +282,7 @@
             </div>
             <div class="citem">
               <div class="citemImage">
-                  <img src="tulsi.jpeg">
+                  <img src="images/tulsi.jpeg">
               </div>
               <div class="citemDetails">
                 <h2>Tulsi (Ocimum sanctum)</h2>
@@ -287,7 +295,7 @@
           </div>
           <div class="citem">
               <div class="citemImage">
-                  <img src="amla.jpg">
+                  <img src="images/amla.jpg">
               </div>
               <div class="citemDetails">
                 <h2>Amla (Phyllanthus emblica)</h2>
@@ -301,7 +309,58 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
-    <script src="chatbot.js"></script>
+    <div class="footer" id="footer">
+      <div class="frow">
+        <div class="fcolumn">
+          <div class="logo">
+            <h2>Department Of Ayush</h2>
+          </div>
+          <p>
+            Explore the world of medicinal plants and traditional healing
+            techniques, empowering your wellness journey with ancient
+            knowledge.
+          </p>
+        </div>
+        <div class="fcolumn">
+          <h3>
+            Address
+            <div class="underline"><span></span></div>
+          </h3>
+          <p>Ministry of Ayush, Ayush Bhawan,</p>
+          <p>B Block, GPO Complex,</p>
+          <p>INA, New Delhi - 110023</p>
+          <p class="email-id">
+            <i class="fa-regular fa-envelope"></i>&nbsp;support_ayush@gov.in
+          </p>
+        </div>
+        <div class="fcolumn">
+          <h3>
+            Quick Links
+            <div class="underline"><span></span></div>
+          </h3>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About US</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">Services</a></li>
+          </ul>
+        </div>
+        <div class="fcolumn">
+          <h3>
+            Contact Us
+            <div class="underline"><span></span></div>
+          </h3>
+          <p>+91-9331863389</p>
+          <p>+91-9230558682</p>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">
+        All Rights Reserved &nbsp;<i class="fa-regular fa-copyright"></i
+        >&nbsp; 2024
+      </p>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/chatbot.js"></script>
   </body>
 </html>
