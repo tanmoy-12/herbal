@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Fetch generated content
             try {
                 // const response = await fetch('http://localhost:3000/generate', {
-                const response = await fetch('https://d9cb-2401-4900-7082-eea2-4569-2fe2-17ec-1f20.ngrok-free.app/generate', {
+                const response = await fetch('https://5e1e-2401-4900-7078-a286-189d-abbf-3d41-ee35.ngrok-free.app/generate', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
