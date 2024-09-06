@@ -518,14 +518,22 @@ html {
   width: 65px;
 }
 .highlights{
+    margin: 16px auto;
     padding: 10px;
-    background-image: url('https://th.bing.com/th/id/R.fe2d40f10bcffc7827e99f0602defa43?rik=ag1Rx1%2bCSJIoSw&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f13%2fPattern-Transparent-Background.png&ehk=thGMRQo%2b85DrGYwd2yxqXhdfhqEdKpfc2oy7JraQZMc%3d&risl=&pid=ImgRaw&r=0');
+    background-image: url('https://th.bing.com/th/id/OIP.lWGmg_8BJzWwqPx1D0n9JwHaDt?rs=1&pid=ImgDetMain');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    height: 600px;
 }
-.highlights video{
-    width: 100%;
-    height: 100%;
+.highlights iframe{
+    margin: 16px auto;
+    border-radius: 6px;
+}
+.heading2{
+    font-size: xx-large;
+    text-align: center;
+    font-weight:600 ;
 }
 .c1{
     display: flex;

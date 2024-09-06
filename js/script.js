@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const plants = [
       { name: 'Ginger', url: 'ginger.html' },
       { name: 'Aloe Vera', url: 'aloevera.html' },
+      { name: 'Neem', url: 'neem.html' },
+      { name: 'ayurveda', url: 'ayurveda.html' },
+      { name: 'aswagandha', url: 'aswagandha.html' },
       // Add more plant names and URLs here as needed
     ];
   
@@ -107,13 +110,3 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
