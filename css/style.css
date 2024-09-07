@@ -928,3 +928,37 @@ a{
     background: #0099ff;
     background: #00152c;
 }
+.container1{
+    display: grid;
+    background-color: transparent;
+    background-image: url("https://th.bing.com/th/id/OIP.pzTsy5rsYURP4dlN7EHQiQHaDt?rs=1&pid=ImgDetMain");
+    margin: 10px;
+}
+.cards{ 
+    display: flex;
+    margin: 0 auto;
+}
+.card{
+    width: 200px;
+    /* background: linear-gradient(45deg, #dfe8ff, #cce2ff, #9f8ba1); */
+    background: transparent;
+    margin: 16px 0;
+    border: none;
+    border-right: 3px solid #4a4d58b7;
+    border-radius: 0px;
+    padding: 16px;
+    text-align: center;
+}
+.card h2{
+    font-size: 32px;
+    font-weight: 600;
+    color: #000153;
+}
+.card h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+.card:last-child{
+    border: 0px;
+}

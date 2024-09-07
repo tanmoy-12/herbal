@@ -176,7 +176,18 @@
             <div class="audio-container">
               <audio id="audio-player" src="medias/tulsi.mp3" controls></audio>
             </div>
-          
+            
+            <button id="comment-button">Leave a Comment</button>
+            <div id="comment-modal" class="modal">
+              <div class="modal-content">
+                  <h3>Leave a Comment</h3>
+                  <textarea id="comment-textarea" placeholder="Write your comment here..."></textarea>
+                  <br>
+                  <button id="submit-comment-btn">Submit</button>
+              </div>
+            </div>
+            <p id="comment-success" class="success-message">Comment submitted & forwarded to admin for verification</p>
+
             <div class="item-name">Tulsi (Holy Basil)</div>
             <div class="item-botanical-name">
               Botanical Name: Ocimum sanctum
@@ -280,7 +291,28 @@
                 </li>
               </ul>
             </div>
-          
+            <button id="note-button">
+              <i class="fa-solid fa-note-sticky"></i>
+            </button>
+            <div id="note-modal" class="modal">
+              <div class="modal-content">
+                <h5>
+                  Take your important Notes&nbsp;<i
+                    class="fa-regular fa-note-sticky"
+                  ></i>
+                </h5>
+                <textarea id="note-textarea"></textarea>
+                <br />
+                <div class="note-button">
+                  <button id="save-btn">
+                    <i class="fa-solid fa-check"></i>&nbsp;Save
+                  </button>
+                  <button id="discard-btn">
+                    <i class="fa-solid fa-xmark"></i>&nbsp;Discard
+                  </button>
+                </div>
+              </div>
+            </div>
             <div class="item-safety">
               <strong>Safety and Side Effects:</strong>
               <p>
@@ -382,6 +414,7 @@
       }
     </script>
     <script src="js/item.js"></script>
+    <script src="js/chatbot.js"></script>
     <script
       type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"

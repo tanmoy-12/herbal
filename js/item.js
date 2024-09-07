@@ -189,3 +189,86 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+// Get elements
+const noteButton = document.getElementById('note-button');
+const modal = document.getElementById('note-modal');
+const noteTextarea = document.getElementById('note-textarea');
+const saveBtn = document.getElementById('save-btn');
+const discardBtn = document.getElementById('discard-btn');
+
+// Open modal
+noteButton.addEventListener('click', () => {
+    const savedNote = localStorage.getItem('userNote');
+    noteTextarea.value = savedNote ? savedNote : ''; // Show saved note if available
+    modal.style.display = 'block';
+});
+
+// Save note to localStorage
+saveBtn.addEventListener('click', () => {
+    const noteContent = noteTextarea.value;
+    localStorage.setItem('userNote', noteContent); // Save to localStorage
+    modal.style.display = 'none'; // Close modal
+});
+
+// Discard changes and close modal
+discardBtn.addEventListener('click', () => {
+    modal.style.display = 'none'; // Close modal without saving changes
+});
+
+// Close modal if clicked outside of it
+window.addEventListener('click', (event) => {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+});
+
+ // Comment modal elements
+ const commentButton = document.getElementById('comment-button');
+ const commentModal = document.getElementById('comment-modal');
+ const commentTextarea = document.getElementById('comment-textarea');
+ const submitCommentBtn = document.getElementById('submit-comment-btn');
+ const successMessage = document.getElementById('comment-success');
+
+ // Open note modal
+ noteButton.addEventListener('click', () => {
+     const savedNote = localStorage.getItem('userNote');
+     noteTextarea.value = savedNote ? savedNote : ''; // Show saved note if available
+     noteModal.style.display = 'block';
+ });
+
+ // Save note to localStorage
+ saveBtn.addEventListener('click', () => {
+     const noteContent = noteTextarea.value;
+     localStorage.setItem('userNote', noteContent); // Save to localStorage
+     noteModal.style.display = 'none'; // Close modal
+ });
+
+ // Discard changes and close note modal
+ discardBtn.addEventListener('click', () => {
+     noteModal.style.display = 'none'; // Close modal without saving changes
+ });
+
+ // Open comment modal
+ commentButton.addEventListener('click', () => {
+     commentTextarea.value = ''; // Clear previous input
+     commentModal.style.display = 'block';
+ });
+
+ // Submit comment and show success message
+ submitCommentBtn.addEventListener('click', () => {
+     commentModal.style.display = 'none'; // Close modal
+     successMessage.style.display = 'block'; // Show success message
+     setTimeout(() => {
+         successMessage.style.display = 'none'; // Hide success message after 3 seconds
+     }, 3000);
+ });
+
+ // Close modals if clicked outside of modal content
+ window.addEventListener('click', (event) => {
+     if (event.target == noteModal) {
+         noteModal.style.display = 'none';
+     }
+     if (event.target == commentModal) {
+         commentModal.style.display = 'none';
+     }
+ });
