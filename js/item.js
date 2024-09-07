@@ -150,3 +150,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const bookmarkButton = document.getElementById('b5');
+
+    // Herb data to store (you can replace this data with dynamic values)
+    const herbData = {
+        name: 'Tulsi',
+        scientificName: 'Ocimum sanctum',
+        image: 'images/aloevera1.jpg',
+        description: ' Tulsi is an aromatic plant native to the Indian subcontinent, revered in Hinduism and widely used in Ayurvedic medicine. The plant has green or purple leaves and small white or purple flowers. It is known for its potent adaptogenic, anti-inflammatory, and antibacterial properties, making it beneficial for overall health and well-being.',
+        id: 5,
+        link: 'tulsi.html'
+    };
+
+    // Check if already bookmarked
+    const bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+    const isBookmarked = bookmarks.some(item => item.id === herbData.id);
+
+    // If already bookmarked, change the button text to "Go to Bookmarks"
+    if (isBookmarked) {
+        bookmarkButton.innerHTML = '<i class="fa-solid fa-bookmark"></i>&nbsp;&nbsp;Go to Bookmarks';
+    }
+
+    // Add click event listener to the bookmark button
+    bookmarkButton.addEventListener('click', () => {
+        if (!isBookmarked) {
+            // Store herb data in localStorage
+            bookmarks.push(herbData);
+            localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+
+            // Change button text to "Go to Bookmarks"
+            bookmarkButton.innerHTML = '<i class="fa-solid fa-bookmark"></i>&nbsp;&nbsp;Go to Bookmarks';
+            window.location.reload();
+        } else {
+            // Redirect to bookmarks page (you can replace this with the actual link to the bookmarks page)
+            window.location.href = 'cart.html'; // Update this URL as per your bookmark page
+        }
+    });
+});
