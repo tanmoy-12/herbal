@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Fetch generated content
             try {
                 // const response = await fetch('http://localhost:3000/generate', {
-                const response = await fetch(' https://backend.niloyghosh.in/api/users/generate', {
+                const response = await fetch(' https://backend.niloyghosh.in//users/api/routes/generate', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
